@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.background {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    120deg,
+    rgba(251, 136, 115, 1) 0%,
+    rgba(243, 100, 91, 1) 120%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 80%;
+  width: 50%;
+  border-radius: 20%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftContainer {
+  flex: 2;
+  background-color: #35454d;
   display: flex;
   flex-direction: column;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+}
+
+.rightContainer {
+  flex: 4;
+  background-color: #ecf3f3;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.leftBarButton {
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+  color: #ecf3f3;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.addDiv {
+  width: 28px;
+  height: 28px;
+  border: none;
+  padding: 5px;
+  background-color: #35454d;
+  border-radius: 20%;
+  color: #ecf3f3;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.upperContainer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.newItemInput {
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.itemsList,
+.remindersList {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px;
+  list-style: none;
+}
+
+.item,
+.reminders {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 18px;
+  user-select: none;
+  border-bottom: 0.5px solid #b9bec1;
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+  color: #9ea5a9;
+}
+
+.selected {
+  background-color: #ecf3f3;
+  color: #35454d;
+  font-weight: 600;
 }
